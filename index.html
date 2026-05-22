@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green Door Coffee · 通用沖煮指南</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="gdc-universal-app">
+
+  <div class="container">
+
+    <!-- HERO -->
+    <header class="hero">
+      <p class="eyebrow">Green Door Coffee</p>
+      <h1>通用沖煮指南 · Universal Brew Guide</h1>
+      <p class="hero-text">
+        唔肯定你嘅咖啡豆適合點沖？揀三個簡單選項，我哋幫你制定沖煮方案。<br>
+        Not sure how to brew your coffee? Pick three options and get a custom recipe.
+      </p>
+    </header>
+
+    <!-- FORM（3 個 select） -->
+    <section class="card">
+
+      <!-- 烘焙度 -->
+      <div class="field">
+        <label>烘焙度 · Roast Level</label>
+        <select id="roastSelect">
+          <option value="light">淺焙 · Light Roast</option>
+          <option value="medium" selected>中焙 · Medium Roast</option>
+          <option value="dark">深焙 · Dark Roast</option>
+        </select>
+        <p class="field-hint">
+          💡 淺焙保留花果香，需較高水溫；深焙醇厚，適合低溫慢萃。
+        </p>
+      </div>
+
+      <!-- 風味調性 -->
+      <div class="field">
+        <label>風味調性 · Flavor Profile</label>
+        <select id="flavorSelect">
+          <option value="floral">花香果酸 · Floral / Fruity</option>
+          <option value="balanced" selected>平衡甜感 · Balanced Sweetness</option>
+          <option value="rich">醇厚濃郁 · Rich / Chocolatey</option>
+        </select>
+        <p class="field-hint">
+          💡 花香果酸突出明亮酸質；平衡甜感最百搭；醇厚濃郁適合配牛奶或重口感。
+        </p>
+      </div>
+
+      <!-- 沖煮哲學 -->
+      <div class="field">
+        <label>沖煮哲學 · Brewing Philosophy</label>
+        <select id="philosophySelect">
+          <option value="clean">乾淨透徹 · Clean & Tea-like</option>
+          <option value="balanced" selected>平衡圓潤 · Balanced & Round</option>
+          <option value="heavy">濃郁厚重 · Heavy & Syrupy</option>
+        </select>
+        <p class="field-hint">
+          💡 乾淨透徹風味線條清晰；平衡圓潤甜感與醇厚度兼顧；濃郁厚重口感飽滿。
+        </p>
+      </div>
+
+    </section>
+
+    <!-- RESULT -->
+    <section class="result-card">
+      <div id="resultPlaceholder" class="placeholder">
+        選擇上面嘅選項，就會自動生成沖煮建議。<br>
+        Select options above to generate a brewing recipe.
+      </div>
+      <div id="result" aria-live="polite"></div>
+    </section>
+
+    <!-- CTA 底部（通用版專用） -->
+    <div class="cta-banner" style="margin-top: 16px; background: #e0e8dc;">
+      <div class="cta-content">
+        <span class="cta-icon">⚖️</span>
+        <div class="cta-text">
+          <strong>需要更精準計算粉水比？</strong><br>
+          試用我哋嘅 Drip Coffee Calculator — 按水量或粉量即時換算。
+        </div>
+        <a href="https://greendoorcoffee.com/drip-coffee-calculator/" class="cta-button" target="_blank" rel="noopener noreferrer">
+          前往計算機 →
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="js/universal.js"></script>
+
+</body>
+</html>

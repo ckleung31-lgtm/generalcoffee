@@ -1,0 +1,328 @@
+/* ========================================
+   Green Door Coffee
+   Brewing Philosophy · 主樣式（含自家精選與通用版）
+   ======================================== */
+
+/* 基礎重置 */
+.gdc-brew-app,
+.gdc-universal-app,
+.gdc-brew-app *,
+.gdc-universal-app * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 根樣式（共用） */
+.gdc-brew-app,
+.gdc-universal-app {
+  width: 100%;
+  color: #2c3e2f;
+  font-family: system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  line-height: 1.65;
+  padding: 32px 20px;
+  background: #f5f7f2;
+}
+
+.gdc-brew-app .container,
+.gdc-universal-app .container {
+  max-width: 720px;
+  margin: auto;
+}
+
+/* HERO */
+.gdc-brew-app .hero,
+.gdc-universal-app .hero {
+  margin-bottom: 32px;
+}
+
+.gdc-brew-app .eyebrow,
+.gdc-universal-app .eyebrow {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #5a7c5a;
+  margin-bottom: 10px;
+}
+
+.gdc-brew-app .hero h1,
+.gdc-universal-app .hero h1 {
+  font-size: 32px;
+  line-height: 1.2;
+  margin-bottom: 12px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #2c4a2e;
+}
+
+.gdc-brew-app .hero-text,
+.gdc-universal-app .hero-text {
+  color: #5a6e55;
+  max-width: 600px;
+  font-size: 14px;
+}
+
+/* 卡片外框 */
+.gdc-brew-app .card,
+.gdc-brew-app .result-card,
+.gdc-universal-app .card,
+.gdc-universal-app .result-card {
+  background: #fbfaf7;
+  border: 1px solid #d9e0d4;
+  border-radius: 20px;
+  padding: 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+/* 表單欄位 */
+.gdc-brew-app .field,
+.gdc-universal-app .field {
+  margin-bottom: 20px;
+}
+
+.gdc-brew-app label,
+.gdc-universal-app label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #3a5a3e;
+}
+
+/* hint 文字 */
+.gdc-universal-app .field-hint {
+  font-size: 12px;
+  color: #7a8e72;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* select 與按鈕 */
+.gdc-brew-app select,
+.gdc-universal-app select,
+.gdc-brew-app button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid #cbd5c3;
+  background: white;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.gdc-brew-app select:focus,
+.gdc-universal-app select:focus {
+  border-color: #5a8c5e;
+  box-shadow: 0 0 0 3px rgba(90, 140, 94, 0.15);
+}
+
+/* 自家精選按鈕（如保留） */
+.gdc-brew-app button {
+  background: #3f5c3e;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  margin-top: 8px;
+}
+.gdc-brew-app button:hover {
+  background: #2c4a2e;
+}
+
+/* 結果區外框灰、內文白（通用版與自家版） */
+.gdc-universal-app .result-card,
+.gdc-brew-app .result-card {
+  background: #eef2ea;  /* 外灰 */
+  padding: 20px;
+}
+
+.gdc-universal-app #result,
+.gdc-brew-app #result {
+  background: #ffffff;  /* 內白 */
+  border-radius: 18px;
+  padding: 20px 20px 8px 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* 結果區內部元件 */
+.gdc-universal-app .result-section,
+.gdc-brew-app .result-section {
+  margin-bottom: 28px;
+}
+
+.gdc-universal-app .section-title,
+.gdc-brew-app .section-title {
+  font-size: 20px;
+  margin-bottom: 14px;
+  font-weight: 600;
+  color: #2c4a2e;
+  border-left: 4px solid #7a9e7a;
+  padding-left: 14px;
+}
+
+.gdc-universal-app .coffee-name,
+.gdc-brew-app .coffee-name {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #2c4a2e;
+}
+
+.gdc-universal-app .coffee-meta,
+.gdc-brew-app .coffee-meta {
+  color: #6a7e62;
+  font-size: 12px;
+}
+
+/* 標籤 */
+.gdc-universal-app .tag-list,
+.gdc-brew-app .tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+.gdc-universal-app .tag,
+.gdc-brew-app .tag {
+  background: #edf3e8;
+  border: 1px solid #d4e0cc;
+  padding: 6px 12px;
+  border-radius: 40px;
+  font-size: 12px;
+  color: #3a5a3e;
+}
+
+/* 參數格網 */
+.gdc-universal-app .recipe-grid,
+.gdc-brew-app .recipe-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.gdc-universal-app .recipe-item,
+.gdc-brew-app .recipe-item {
+  background: #fafcf8;
+  border: 1px solid #e0e8d8;
+  border-radius: 16px;
+  padding: 18px;
+}
+.gdc-universal-app .recipe-item h3,
+.gdc-brew-app .recipe-item h3 {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #7a8e72;
+  margin-bottom: 6px;
+}
+.gdc-universal-app .recipe-item p,
+.gdc-brew-app .recipe-item p {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2c4a2e;
+}
+
+/* 注水步驟 */
+.gdc-universal-app .pour-step,
+.gdc-brew-app .pour-step {
+  background: #fafcf8;
+  border: 1px solid #e0e8d8;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+.gdc-universal-app .pour-title,
+.gdc-brew-app .pour-title {
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 15px;
+  color: #2c4a2e;
+}
+.gdc-universal-app .pour-detail,
+.gdc-brew-app .pour-detail {
+  color: #6a7e62;
+  font-size: 13px;
+}
+
+/* 解說區 */
+.gdc-universal-app .analysis,
+.gdc-brew-app .analysis {
+  line-height: 1.8;
+  color: #4a5e44;
+  font-size: 14px;
+}
+.gdc-universal-app .analysis-highlight,
+.gdc-brew-app .analysis-highlight {
+  background: #edf3e8;
+  border-radius: 16px;
+  padding: 18px;
+  margin-top: 16px;
+  border-left: 3px solid #7a9e7a;
+}
+
+/* CTA 區塊 */
+.gdc-universal-app .cta-banner,
+.gdc-brew-app .cta-banner {
+  background: #e8efe2;
+  border-radius: 20px;
+  padding: 20px 24px;
+  margin-top: 28px;
+  border: 1px solid #d4e0cc;
+}
+.gdc-universal-app .cta-content,
+.gdc-brew-app .cta-content {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.gdc-universal-app .cta-icon {
+  font-size: 32px;
+}
+.gdc-universal-app .cta-text {
+  flex: 1;
+  font-size: 14px;
+  color: #3a5a3e;
+}
+.gdc-universal-app .cta-button {
+  background: #3f5c3e;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: 0.2s;
+  display: inline-block;
+}
+.gdc-universal-app .cta-button:hover {
+  background: #2c4a2e;
+  color: white;
+}
+
+/* 響應式 */
+@media (max-width: 640px) {
+  .gdc-brew-app, .gdc-universal-app {
+    padding: 20px 16px;
+  }
+  .gdc-brew-app .hero h1, .gdc-universal-app .hero h1 {
+    font-size: 28px;
+  }
+  .gdc-brew-app .card, .gdc-brew-app .result-card,
+  .gdc-universal-app .card, .gdc-universal-app .result-card {
+    padding: 20px;
+  }
+  .gdc-universal-app .recipe-grid,
+  .gdc-brew-app .recipe-grid {
+    grid-template-columns: 1fr;
+  }
+  .gdc-universal-app .cta-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .gdc-universal-app .cta-button {
+    width: 100%;
+    text-align: center;
+  }
+}
